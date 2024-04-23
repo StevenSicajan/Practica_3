@@ -32,10 +32,10 @@ void setup() {
 }
 
 void loop() {
-  if(digitalRead(avanzar)==HIGH)  //Leo el estado digital del pin 2 y si este es bajo.
+  if(digitalRead(avanzar)==HIGH) 
   {
    
-   seleccion_producto = (seleccion_producto +1) %4;  //aumento en uno el contador
+   seleccion_producto = (seleccion_producto +1) %4;  
    Serial.print("El producto seleccionado es: ");
    Serial.println(snack[seleccion_producto].tipo_producto);
    Serial.print("Cantidad existente: ");
@@ -43,10 +43,10 @@ void loop() {
     delay(350);
   }
   
- if(digitalRead(retroceder)==HIGH)  //Leo el estado digital del pin 2 y si este es bajo.
+ if(digitalRead(retroceder)==HIGH)  
   {
    
-   seleccion_producto = (seleccion_producto -1 +4) %4;  //aumento en uno el contador
+   seleccion_producto = (seleccion_producto -1 +4) %4;  
    Serial.print("El producto seleccionado es: ");
    Serial.println(snack[seleccion_producto].tipo_producto);
    Serial.print("Cantidad existente: ");
